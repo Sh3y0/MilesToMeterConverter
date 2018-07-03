@@ -9,10 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //
+    //properties
+    @IBOutlet var txtValue: UITextField!
+    @IBOutlet var scOptions: UISegmentedControl!
+    @IBOutlet var lblResult: UILabel!
+    
+    let unitMiles : Double = 1.609
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if scOptions.selectedSegmentIndex == 0{
+            lblResult.text = "00.00 M"
+            txtValue.placeholder = "00.00 Km"
+        }else{
+            lblResult.text = "00.00 Km"
+            txtValue.placeholder = "00.00 M"
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +37,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //
+    //actions
+    
+    @IBAction func procesResult(_ sender: Any) {
+        let selectedIndex = scOptions.selectedSegmentIndex
+        
+        let valueToProces : Double = Double(txtValue.text!)!
+        
+        if selectedIndex == 0 {
+            let convertedValue = valueToProces / unitMiles
+            lblResult.text = "\(String(format: "%.2f", convertedValue)) M"
+        }else{
+            let convertedValue = valueToProces * unitMiles
+            lblResult.text = "\(String(format: "%.2f", convertedValue)) Km"
+        }
+    }
 
+    @IBAction func changeType(_ sender: Any) {
+        if scOptions.selectedSegmentIndex == 0{
+            lblResult.text = "00.00 M"
+            txtValue.placeholder = "00.00 Km"
+        }else{
+            lblResult.text = "00.00 Km"
+            txtValue.placeholder = "00.00 M"
+        }
+    }
 }
 
