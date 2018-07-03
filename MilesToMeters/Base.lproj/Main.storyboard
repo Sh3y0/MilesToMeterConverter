@@ -237,6 +237,7 @@
                                     <color key="titleColor" red="0.9822753957" green="1" blue="0.95374776679999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="guessFingers:" destination="9mt-Sa-qkc" eventType="touchUpInside" id="1JX-Dd-94c"/>
                                     <action selector="procesResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n39-kd-8jV"/>
                                 </connections>
                             </button>
@@ -276,6 +277,10 @@
                         <viewLayoutGuide key="safeArea" id="458-On-D1b"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cuantos dedos tengo" id="u9K-oK-UUJ"/>
+                    <connections>
+                        <outlet property="cpuFingers" destination="C3s-um-7Df" id="AeG-9y-pC2"/>
+                        <outlet property="txtFingers" destination="geI-Sr-mSK" id="cCd-Sb-Ifp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcC-kY-Yfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
