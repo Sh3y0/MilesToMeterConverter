@@ -127,9 +127,6 @@
                                     <segment title="REALES"/>
                                 </segments>
                                 <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="changeType:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xbe-36-p69"/>
-                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M0n-PF-T1Z" userLabel="scOptions">
                                 <rect key="frame" x="44" y="358" width="286" height="29"/>
@@ -140,19 +137,19 @@
                                     <segment title="REALES"/>
                                 </segments>
                                 <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="changeType:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jld-px-Hxs"/>
-                                </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-RE-Z5V" userLabel="btnConvert">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-RE-Z5V" userLabel="btnConvert">
                                 <rect key="frame" x="0.0" y="608" width="375" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.3255907703" green="0.33146587170000003" blue="0.31613483489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="rgw-qw-gJm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="CONVERTIR">
                                     <color key="titleColor" red="0.9822753957" green="1" blue="0.95374776679999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="evalueta:" destination="Ahb-82-95l" eventType="touchUpInside" id="VUv-b1-CaU"/>
                                     <action selector="procesResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZH-6U-JqJ"/>
                                 </connections>
                             </button>
@@ -180,24 +177,36 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="bTJ-RE-Z5V" firstAttribute="trailing" secondItem="mAS-of-zkC" secondAttribute="trailing" id="9TE-OZ-Ngx"/>
+                            <constraint firstItem="bTJ-RE-Z5V" firstAttribute="bottom" secondItem="mAS-of-zkC" secondAttribute="bottom" id="9Yg-6a-Qok"/>
                             <constraint firstItem="wAw-qw-y0u" firstAttribute="top" secondItem="tHp-v6-tTf" secondAttribute="bottom" constant="26" id="Cne-5j-gEj"/>
                             <constraint firstItem="mAS-of-zkC" firstAttribute="trailing" secondItem="wAw-qw-y0u" secondAttribute="trailing" constant="45" id="E6W-Gb-Vh5"/>
                             <constraint firstItem="mAS-of-zkC" firstAttribute="trailing" secondItem="M0n-PF-T1Z" secondAttribute="trailing" constant="45" id="Ep7-S3-sHV"/>
                             <constraint firstItem="tHp-v6-tTf" firstAttribute="centerY" secondItem="gTN-so-pLp" secondAttribute="centerY" constant="-186.5" id="F9F-DQ-6KS"/>
                             <constraint firstItem="mAS-of-zkC" firstAttribute="trailing" secondItem="Noh-Ai-EHB" secondAttribute="trailing" constant="16" id="FaY-Kp-xSw"/>
+                            <constraint firstItem="bTJ-RE-Z5V" firstAttribute="leading" secondItem="mAS-of-zkC" secondAttribute="leading" id="PtN-0l-U4f"/>
+                            <constraint firstItem="bTJ-RE-Z5V" firstAttribute="bottom" secondItem="mAS-of-zkC" secondAttribute="bottom" id="Wqp-gy-w47"/>
                             <constraint firstItem="Noh-Ai-EHB" firstAttribute="top" secondItem="M0n-PF-T1Z" secondAttribute="bottom" constant="43" id="Wvb-I8-FW9"/>
                             <constraint firstItem="tHp-v6-tTf" firstAttribute="centerX" secondItem="gTN-so-pLp" secondAttribute="centerX" id="alw-y0-RRu"/>
                             <constraint firstItem="M0n-PF-T1Z" firstAttribute="top" secondItem="E60-UC-T6z" secondAttribute="bottom" constant="27" id="bEw-VR-QIe"/>
                             <constraint firstItem="mAS-of-zkC" firstAttribute="trailing" secondItem="E60-UC-T6z" secondAttribute="trailing" constant="15" id="cHS-ls-eSt"/>
                             <constraint firstItem="E60-UC-T6z" firstAttribute="leading" secondItem="mAS-of-zkC" secondAttribute="leading" constant="17" id="gJM-iH-OrV"/>
                             <constraint firstItem="E60-UC-T6z" firstAttribute="top" secondItem="wAw-qw-y0u" secondAttribute="bottom" constant="41" id="gvn-Jr-07Y"/>
+                            <constraint firstItem="bTJ-RE-Z5V" firstAttribute="trailing" secondItem="mAS-of-zkC" secondAttribute="trailing" id="kPy-Lc-QlN"/>
                             <constraint firstItem="wAw-qw-y0u" firstAttribute="leading" secondItem="mAS-of-zkC" secondAttribute="leading" constant="44" id="pED-3C-uFJ"/>
                             <constraint firstItem="Noh-Ai-EHB" firstAttribute="leading" secondItem="mAS-of-zkC" secondAttribute="leading" constant="16" id="r3d-xA-Sla"/>
+                            <constraint firstItem="bTJ-RE-Z5V" firstAttribute="leading" secondItem="mAS-of-zkC" secondAttribute="leading" id="y7p-cL-EsX"/>
                             <constraint firstItem="M0n-PF-T1Z" firstAttribute="leading" secondItem="mAS-of-zkC" secondAttribute="leading" constant="44" id="zAT-5M-xet"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mAS-of-zkC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Divisas" id="3IW-Vp-zcR"/>
+                    <connections>
+                        <outlet property="fromMoney" destination="wAw-qw-y0u" id="zt0-Mg-Dyy"/>
+                        <outlet property="fromValue" destination="E60-UC-T6z" id="fS2-ra-kWV"/>
+                        <outlet property="toMoney" destination="M0n-PF-T1Z" id="jbI-gR-KoU"/>
+                        <outlet property="toVAlue" destination="Noh-Ai-EHB" id="UXJ-gu-nWN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zu1-yn-BUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcC-kY-Yfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824.79999999999995" y="1126.6866566716642"/>
+            <point key="canvasLocation" x="825" y="1248"/>
         </scene>
         <!--Edad Perruna-->
         <scene sceneID="j2u-hn-B8l">
@@ -345,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYq-ui-NdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="462"/>
+            <point key="canvasLocation" x="825" y="520"/>
         </scene>
         <!--Miles 2 Meter-->
         <scene sceneID="tne-QT-ifu">
@@ -433,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="-869"/>
+            <point key="canvasLocation" x="825" y="-976"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lnx-8C-85r">
