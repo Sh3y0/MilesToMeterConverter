@@ -39,19 +39,8 @@ class ViewController: UIViewController {
 
     //
     //actions
-    
     @IBAction func procesResult(_ sender: Any) {
-        let selectedIndex = scOptions.selectedSegmentIndex
-        
-        let valueToProces : Double = Double(txtValue.text!)!
-        
-        if selectedIndex == 0 {
-            let convertedValue = valueToProces / unitMiles
-            lblResult.text = "\(String(format: "%.2f", convertedValue)) M"
-        }else{
-            let convertedValue = valueToProces * unitMiles
-            lblResult.text = "\(String(format: "%.2f", convertedValue)) Km"
-        }
+        convertResult()
     }
 
     @IBAction func changeType(_ sender: Any) {
@@ -61,6 +50,30 @@ class ViewController: UIViewController {
         }else{
             lblResult.text = "00.00 Km"
             txtValue.placeholder = "00.00 M"
+        }
+    }
+    
+    func convertResult() {
+        let selectedIndex = scOptions.selectedSegmentIndex
+        
+        if txtValue.text == "" {
+            let alertControler : UIAlertController = UIAlertController(title: "Error", message: "Favor ingresar un valor", preferredStyle: .alert)
+            
+            let closeAlert : UIAlertAction = UIAlertAction(title: "Cerrar", style: .default, handler: nil)
+            
+            alertControler.addAction(closeAlert)
+            
+            present(alertControler, animated: true, completion: nil)
+        }else{
+            let valueToProces : Double = Double(txtValue.text!)!
+            
+            if selectedIndex == 0 {
+                let convertedValue = valueToProces / unitMiles
+                lblResult.text = "\(String(format: "%.2f", convertedValue)) M"
+            }else{
+                let convertedValue = valueToProces * unitMiles
+                lblResult.text = "\(String(format: "%.2f", convertedValue)) Km"
+            }
         }
     }
 }
