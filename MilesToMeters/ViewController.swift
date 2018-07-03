@@ -15,10 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet var scOptions: UISegmentedControl!
     @IBOutlet var lblResult: UILabel!
     
+    /*override var prefersStatusBarHidden: Bool {
+        return true
+    }*/
+    
     let unitMiles : Double = 1.609
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         if scOptions.selectedSegmentIndex == 0{

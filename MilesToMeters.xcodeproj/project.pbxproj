@@ -12,6 +12,9 @@
 		A60A69A520EB0B850076186B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60A69A320EB0B850076186B /* Main.storyboard */; };
 		A60A69A720EB0B870076186B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60A69A620EB0B870076186B /* Assets.xcassets */; };
 		A60A69AA20EB0B870076186B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60A69A820EB0B870076186B /* LaunchScreen.storyboard */; };
+		A60A69B520EB4C530076186B /* DivisasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60A69B420EB4C530076186B /* DivisasController.swift */; };
+		A60A69B720EB4C6A0076186B /* DogAgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60A69B620EB4C6A0076186B /* DogAgeController.swift */; };
+		A60A69B920EB4C780076186B /* LetsPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60A69B820EB4C780076186B /* LetsPlayController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		A60A69A620EB0B870076186B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A60A69A920EB0B870076186B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A60A69AB20EB0B870076186B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60A69B420EB4C530076186B /* DivisasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisasController.swift; sourceTree = "<group>"; };
+		A60A69B620EB4C6A0076186B /* DogAgeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAgeController.swift; sourceTree = "<group>"; };
+		A60A69B820EB4C780076186B /* LetsPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsPlayController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				A60A69A620EB0B870076186B /* Assets.xcassets */,
 				A60A69A820EB0B870076186B /* LaunchScreen.storyboard */,
 				A60A69AB20EB0B870076186B /* Info.plist */,
+				A60A69B420EB4C530076186B /* DivisasController.swift */,
+				A60A69B620EB4C6A0076186B /* DogAgeController.swift */,
+				A60A69B820EB4C780076186B /* LetsPlayController.swift */,
 			);
 			path = MilesToMeters;
 			sourceTree = "<group>";
@@ -135,7 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A60A69B720EB4C6A0076186B /* DogAgeController.swift in Sources */,
+				A60A69B920EB4C780076186B /* LetsPlayController.swift in Sources */,
 				A60A69A220EB0B850076186B /* ViewController.swift in Sources */,
+				A60A69B520EB4C530076186B /* DivisasController.swift in Sources */,
 				A60A69A020EB0B850076186B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
