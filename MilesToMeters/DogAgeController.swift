@@ -9,7 +9,13 @@
 import UIKit
 
 class DogAgeController: UIViewController {
-
+    //
+    //Properties
+    @IBOutlet var txtDogAge: UITextField!
+    @IBOutlet var lblResult: UILabel!
+    
+    let anoPerruno: Int = 7
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +37,20 @@ class DogAgeController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func calculateAge(_ sender: Any) {
+        if txtDogAge.text == ""{
+            let alertControler : UIAlertController = UIAlertController(title: "Error", message: "Favor ingresar un valor", preferredStyle: .alert)
+            
+            let closeAlert : UIAlertAction = UIAlertAction(title: "Cerrar", style: .default, handler: nil)
+            
+            alertControler.addAction(closeAlert)
+            
+            present(alertControler, animated: true, completion: nil)
+        }else{
+            let dogAge = Int(txtDogAge.text!)! * anoPerruno
+            lblResult.text = "Tu 🐶 tiene \(dogAge) años"
+        }
+        
+    }
 }

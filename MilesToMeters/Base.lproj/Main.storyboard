@@ -291,6 +291,7 @@
                                     <color key="titleColor" red="0.9822753957" green="1" blue="0.95374776679999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="calculateAge:" destination="4QF-Z7-Xuk" eventType="touchUpInside" id="nhB-sb-MHq"/>
                                     <action selector="procesResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2n-oc-fuA"/>
                                 </connections>
                             </button>
@@ -337,6 +338,10 @@
                         <viewLayoutGuide key="safeArea" id="Fr3-8h-TZc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edad Perruna" id="XjR-qD-7LB"/>
+                    <connections>
+                        <outlet property="lblResult" destination="B2V-QD-IhW" id="qD8-lp-42Z"/>
+                        <outlet property="txtDogAge" destination="81F-NB-Anu" id="rsZ-yO-MIL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYq-ui-NdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
